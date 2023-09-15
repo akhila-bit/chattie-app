@@ -8,9 +8,11 @@ import {PublicRoute} from './components/PublicRoute';
 import Signin from './pages/Signin';
 import Home from './pages/Home';
 import { BrowserRouter } from 'react-router-dom';
+import { ProfileProvider } from './context/profile.context';
 
 function App() {
   return (
+    <ProfileProvider >
       <Switch>
         <PublicRoute path="/signin">
           <Signin />
@@ -19,6 +21,7 @@ function App() {
           <Home />
         </PrivateRoute>
       </Switch>
+      </ProfileProvider>    
   );
 }
 

@@ -1,5 +1,15 @@
+import { Grid, Row, Col, Sidebar } from 'rsuite';
+import SideBar from '../components/Sidebar';
 const Home = () => {
-  return <div>home</div>;
+  return (
+    <Grid fluid className="h-100">
+      <Row>
+        <Col xs={24} md={8}>
+          <SideBar />
+        </Col>
+      </Row>
+    </Grid>
+  );
 };
 
 export default Home;
