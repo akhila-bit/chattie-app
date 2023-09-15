@@ -7,6 +7,7 @@ import {PrivateRoute} from './components/PrivateRoute';
 import {PublicRoute} from './components/PublicRoute';
 import Signin from './pages/Signin';
 import Home from './pages/Home';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
