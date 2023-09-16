@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useState, useEffect } from 'react';
+import { useContext, createContext, useState, useEffect } from 'react';
 import { auth, database } from '../misc/firebase';
 
 const ProfileContext = createContext();

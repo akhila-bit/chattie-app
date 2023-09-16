@@ -24,6 +24,10 @@ const Signin = () => {
     signinwithProvider(new firebase.auth.GoogleAuthProvider());
   };
 
+  const onfacebooksignin = () => {
+    signinwithProvider(new firebase.auth.FacebookAuthProvider());
+  };
+
   return (
     <Container>
       <Grid>

@@ -2,11 +2,18 @@ import { Alert, Button, Divider, Drawer } from 'rsuite';
 import { useProfile } from '../../context/profile.context';
 import { EditableInput } from '../EditableInput';
 import { database } from '../../misc/firebase';
+import { ProvideBlock } from './ProvideBlock';
 
 const Dashboard = ({ OnsignOut }) => {
   const { profile } = useProfile();
   const onSave = async newData => {
-    const useNameRef = database.ref(`/profiles/${profile.uid}`).child('name');
+    console.log(newData);
+    const useNameRef = database
+      .ref(
+        `/pr
+    ofiles/${profile.uid}`
+      )
+      .child('name');
     try {
       await useNameRef.set(newData);
       Alert.success('Name updated', 4000);
@@ -18,8 +25,9 @@ const Dashboard = ({ OnsignOut }) => {
     <>
       <Drawer.Header>
         <Drawer.Title>Dashboard</Drawer.Title>
+        <ProvideBlock />
       </Drawer.Header>
-
+      {/*  */}
       <Drawer.Body>
         <h3>Hey {profile.name}</h3>
         <Divider />
