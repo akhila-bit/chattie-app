@@ -1,6 +1,8 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Navigate, Redirect, Route } from 'react-router-dom';
 import { useProfile } from '../context/profile.context';
 import { Container, Loader } from 'rsuite';
+import Signin from '../pages/Signin';
+import { Children } from 'react';
 
 export const PrivateRoute = ({ children, ...routp }) => {
   const { profile, isLoding } = useProfile();
